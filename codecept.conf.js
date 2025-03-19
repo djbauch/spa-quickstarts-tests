@@ -1,4 +1,4 @@
-var url;
+let url;
 if (process.env.WEBAPP_URL){
   url = process.env.WEBAPP_URL;
 } else if (process.env.SAMPLE_PORT){
@@ -8,12 +8,24 @@ if (process.env.WEBAPP_URL){
 }
 
 const { exec } = require("child_process");
+
 exec("npx puppeteer browsers install chrome", (error, stdout, stderr) => {
   if (error) {
     console.error(`exec error: ${error}`);
     return;
   }
   console.log('Executed npx puppeteer browsers install chrome');
+  console.log(`stdout: ${stdout}`);
+  console.error(`stderr: ${stderr}`);
+}
+);
+
+exec("npm list", (error, stdout, stderr) => {
+  if (error) {
+    console.error(`exec error: ${error}`);
+    return;
+  }
+  console.log('npm list output');
   console.log(`stdout: ${stdout}`);
   console.error(`stderr: ${stderr}`);
 }
