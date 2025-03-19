@@ -13,6 +13,7 @@ exec("npx puppeteer browsers install chrome", (error, stdout, stderr) => {
     console.error(`exec error: ${error}`);
     return;
   }
+  console.log('Executed npx puppeteer browsers install chrome');
   console.log(`stdout: ${stdout}`);
   console.error(`stderr: ${stderr}`);
 }
