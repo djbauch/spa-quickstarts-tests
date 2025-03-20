@@ -15,7 +15,7 @@ const execPromise = util.promisify(exec);
 // Function to install Puppeteer and then list npm packages
 async function installPuppeteer() {
   execPromise(
-    "npm install -g npm@11.2.0; npx @puppeteer/browsers install chrome@131/0/6778.204"
+    "npm install -g npm@11.2.0; npx @puppeteer/browsers install chrome@131.0.6778.204"
   )
     .then(({ stdout, stderr }) => {
       console.log("Executed npx puppeteer browsers install chrome");
