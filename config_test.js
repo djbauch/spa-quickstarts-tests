@@ -1,6 +1,6 @@
 const { exec } = require("child_process");
 
-exec("npm list", (error, stdout, stderr) => {
+exec("npx coodeceptjs info", (error, stdout, stderr) => {
   if (error) {
     console.error(`Error executing command: ${error.message}`);
     return;
