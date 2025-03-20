@@ -13,7 +13,7 @@ exports.config = {
   output: "out",
   multiple: {
     basic: {
-      browsers: ["chrome", "firefox"],
+      browsers: ["chromium", "firefox"],
     },
   },
   helpers: {
