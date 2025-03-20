@@ -10,6 +10,6 @@ Scenario("Log in using Lock", ({ I }) => {
   I.fillField('input[name="password"]', "asdasd");
   I.click("button[type='submit']");
   I.wait(3);
-  I.waitFOrVisible('span[id="error-element-password"]', 20);
+  I.waitForVisible('span[id="error-element-password"]', 20);
   I.see("Wrong email or password");
 });
