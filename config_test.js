@@ -1,6 +1,6 @@
 const { exec } = require("child_process");
 
-exec("npx codeceptjs info", (error, stdout, stderr) => {
+exec("env", (error, stdout, stderr) => {
   if (error) {
     console.error(`Error executing command: ${error.message}`);
     return;
